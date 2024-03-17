@@ -11,7 +11,6 @@ import styles from "./styles.module.css";
 const Editor = () => {
   // Editor state
   const [value, setValue] = useState("");
-
   // Editor ref
   const quill = useRef();
 
@@ -100,6 +99,7 @@ const Editor = () => {
       <button onClick={handler} className={styles.btn}>
         Submit
       </button>
+      <div dangerouslySetInnerHTML={{ __html: value }}></div>
     </div>
   );
 };
